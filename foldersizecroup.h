@@ -1,4 +1,3 @@
-
 #ifndef FOLDERSIZECROUP_H
 #define FOLDERSIZECROUP_H
 #include "SizeGrouper.h"
