@@ -1,12 +1,13 @@
-
 #ifndef SIZEGROUPER_H
 #define SIZEGROUPER_H
+
 #include <QMap>
 
 class SizeGrouper
 {
 public:
     virtual ~SizeGrouper();
+
     virtual QMap<QString, qint64> group(const QString& path, qint64& total);
 
 protected:

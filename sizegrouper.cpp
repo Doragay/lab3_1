@@ -1,7 +1,9 @@
-
 #include "sizegrouper.h"
-#include <QMap>
 #include <QFileInfo>
+
+SizeGrouper::~SizeGrouper()
+{
+}
 
 QMap<QString, qint64> SizeGrouper::group(const QString& path, qint64& total)
 {
