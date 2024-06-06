@@ -7,7 +7,6 @@ class SizeGrouper
 {
 public:
     virtual ~SizeGrouper();
-
     virtual QMap<QString, qint64> group(const QString& path, qint64& total);
 
 protected:

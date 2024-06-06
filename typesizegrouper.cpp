@@ -12,7 +12,7 @@ void TypeSizeGrouper::groupInto(const QString& path, QMap<QString, qint64>& grou
 
     QDirIterator fileIt(path, QDir::Files | QDir::NoSymLinks);
     while (fileIt.hasNext()) {
-        auto info = QFileInfo(fileIt.next());
+        auto info = QFileInfo(fileIt.next()); //получает информацию о следущем файле
         groups["*." + info.suffix()] += info.size();
         total += info.size();
     }
