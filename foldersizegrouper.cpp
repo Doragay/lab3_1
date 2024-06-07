@@ -7,7 +7,7 @@ void FolderSizeGrouper::groupInto(const QString& path, QMap<QString, qint64>& gr
 {
     QFileInfo pathInfo(path);
     if (!pathInfo.exists() || !pathInfo.isDir()) {
-        throw std::runtime_error("Directory \"" + path.toStdString() + "\" doesn't exists");
+        throw std::runtime_error("Directory doesn't exists");
     }
 //Проходится по всем файлам и суммирует их размеры
     qint64 currentTotal = 0;
