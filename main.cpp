@@ -6,14 +6,15 @@
 class Context
 {
 public:
-    void setSizeGrouper(SizeGrouper* grouper)
+    void setSizeGrouper(SizeGrouper* grouper)//Принимает указатель на SizeGrouper
+
     {
-        _grouper.reset(grouper);
+        _grouper.reset(grouper);//устанавливает новый объект
     }
 
     QMap<QString, qint64> makeGroup(const QString& path, qint64& total)
     {
-        return _grouper ? _grouper->group(path, total) : QMap<QString, qint64>{};
+        return _grouper ? _grouper->group(path, total) : QMap<QString, qint64>{};//Если объект не равен nullptr, то для него вызывается метод, который возвращает карту.
     }
 
 private:
